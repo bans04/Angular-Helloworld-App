@@ -4,7 +4,8 @@
   <img [src]="imgUrl" (click) = "onClick()" alt="BridgeLabz Logo"/>
 </div>
 <div style="text-align:center ;">
-  <input [(ngModel)] = "userName"/>
+  <input (input)="checkInput($event)" [(ngModel)]="userName"/>
+  <span style="color:red ;">{{this.userNameError}}</span>
 </div>
 
 <!-- <router-outlet></router-outlet> -->
